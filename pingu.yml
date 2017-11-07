@@ -1,6 +1,6 @@
 - name: ping ubuntu machines
   hosts: all
-  gather_facts: no
+  become: no
   tasks:
-      - name: ping all hosts
-      ping:
+  - name: ping all hosts
+    ping:
