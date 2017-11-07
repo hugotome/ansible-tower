@@ -1,0 +1,6 @@
+- name: Ping 
+  hosts: all
+  become: no
+  tasks:
+  - name: ping
+    win_ping:
