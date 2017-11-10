@@ -1,5 +1,5 @@
 ---
-- hosts: grupo1
+- hosts: all
   sudo: yes
   tasks:
 
