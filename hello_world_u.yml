@@ -1,5 +1,5 @@
 - name: Hello World Sample
-  hosts: marcos
+  hosts: batatinhas
   tasks:
     - name: Hello Message
       debug:
