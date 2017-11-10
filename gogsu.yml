@@ -1,6 +1,12 @@
-- name: Install gogs in ubuntu machines
-  hosts: all
+---
+- hosts: grupo1
+  sudo: yes
   tasks:
+
+    - name: Update all packages to the latest version
+      apt:
+        upgrade: dist
+
     - name: Install git
       apt: name=git update_cache=yes state=latest
 
@@ -9,3 +15,6 @@
 
     - name: Extract archive
       command: chdir=/usr/share /bin/tar xvf /opt/linux_amd64.tar.gz -C /opt/ creates=/opt/gogs
+
+    - name: Finished Installation
+      command: echo 'Gogs installed and runnig \n'
