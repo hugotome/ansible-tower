@@ -1,6 +1,6 @@
 ---
 - hosts: all
-  user: vagrant
+  user: root
   sudo: yes
   tasks:
 
