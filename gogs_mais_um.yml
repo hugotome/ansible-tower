@@ -2,7 +2,6 @@
 - hosts: all
   user: vagrant
   sudo: yes
-  become: true
   tasks:
 
     - name: Update all packages to the latest version
