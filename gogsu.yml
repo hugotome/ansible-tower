@@ -3,10 +3,6 @@
   sudo: yes
   tasks:
 
-    - name: Update all packages to the latest version
-      apt:
-        upgrade: dist
-
     - name: Install git
       apt: name=git update_cache=yes state=latest
 
