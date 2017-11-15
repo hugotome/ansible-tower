@@ -1,6 +1,8 @@
 ---
 - hosts: all
-  sudo: yes
+  become: true
+  become_user: root
+  become_method: sudo
   tasks:
 
     - name: Install git
