@@ -1,0 +1,19 @@
+---
+- hosts: all
+  become: no
+  tasks:
+  - name: Download tomcat
+    win_get_url:
+      url: http://mirrors.up.pt/pub/apache/tomcat/tomcat-9/v9.0.1/bin/apache-tomcat-9.0.1.zip
+      dest: C:\Windows\Temp\apache-tomcat-9.0.1.zip
+      force: no
+
+  - name: Unzip gz log
+    win_unzip:
+      src: C:\Windows\Temp\apache-tomcat-9.0.1.zip
+      dest: C:\
+
+  - name: Copy server xml
+    win_copy:
+     src: /etc/ansible/files/server.xml
+     dest: C:\apache-tomcat-9.0.1\conf\server.xml
